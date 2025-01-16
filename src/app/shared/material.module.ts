@@ -11,6 +11,7 @@ import { MatSidenav, MatSidenavModule } from '@angular/material/sidenav';
     MatSidenav,
   ],
   exports: [
+    CommonModule,
     MatSidenavModule,
     MatSidenav,
   ]

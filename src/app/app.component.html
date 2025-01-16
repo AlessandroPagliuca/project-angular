@@ -3,14 +3,17 @@
   <mat-sidenav #sidenav position="end" mode="over" class="bg-danger">End</mat-sidenav>
   <mat-sidenav-content>
     <!--NAVBAR-->
-    <header>
-      <app-navbar></app-navbar>
-      <button type="button" mat-button (click)="sidenav.toggle()">
+    <header class="container-fluid d-flex align-items-center"
+      [ngClass]="{'justify-content-between': isMobileSizeScreen}">
+      <nav>
+        <app-navbar></app-navbar>
+      </nav>
+      <button [ngClass]="{'d-none': !isMobileSizeScreen}" type="button" mat-button (click)="sidenav.toggle()">
         Toggle sidenav
       </button>
     </header>
     <!--MAIN CONTENT-->
-    <main>
+    <main class="container">
       <router-outlet></router-outlet>
     </main>
   </mat-sidenav-content>
