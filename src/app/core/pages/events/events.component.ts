@@ -14,14 +14,10 @@ export class EventsComponent {
   protected isLoading: boolean = false;
 
   constructor(private httpEvent: EventService) {
-    this.getEvents();
-
   }
 
   ngOnInit(): void {
-    if (this.isLoading) {
-      this.getEvents();
-    }
+    this.getEvents();
   }
 
   protected getEvents(): void {
