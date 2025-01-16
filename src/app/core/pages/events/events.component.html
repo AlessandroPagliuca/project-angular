@@ -1,0 +1,8 @@
+<p>events works!</p>
+@if (isLoading) {
+<p>loading...</p>
+}@else{
+@for (event of eventList; track $index) {
+<p>{{event.name}}</p>
+}
+}
