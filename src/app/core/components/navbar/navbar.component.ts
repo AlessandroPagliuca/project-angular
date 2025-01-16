@@ -8,5 +8,4 @@ import { MaterialModule } from '../../../shared/material.module';
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
-
 }

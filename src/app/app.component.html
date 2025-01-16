@@ -1,10 +1,10 @@
-<mat-sidenav-container class="sidenav-container">
+<mat-sidenav-container>
   <!--SIDENAV-->
   <mat-sidenav #sidenav position="end" mode="over" class="bg-danger">End</mat-sidenav>
   <mat-sidenav-content>
     <!--NAVBAR-->
     <header>
-      <p>header</p>
+      <app-navbar></app-navbar>
       <button type="button" mat-button (click)="sidenav.toggle()">
         Toggle sidenav
       </button>
