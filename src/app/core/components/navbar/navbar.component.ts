@@ -1,12 +1,33 @@
 import { Component } from '@angular/core';
 import { MaterialModule } from '../../../shared/material.module';
-import { RouterLink } from '@angular/router';
+import { RouterLink, RouterLinkActive } from '@angular/router';
+import { RouterLinkList } from '../../../shared/models/linkList/router-link-list';
+import { API_PATH } from '../../../shared/enums/api-path';
+
 
 @Component({
   selector: 'app-navbar',
-  imports: [MaterialModule, RouterLink],
+  imports: [MaterialModule, RouterLink, RouterLinkActive],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
+  protected linkList: RouterLinkList[] = [
+    {
+      path: API_PATH.HOME,
+      name: 'home'
+    },
+    {
+      path: API_PATH.EVENTS,
+      name: 'events'
+    },
+    {
+      path: API_PATH.SIGNUP,
+      name: 'signup'
+    },
+  ];
+
+  constructor() {
+
+  }
 }

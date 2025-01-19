@@ -1,4 +1,10 @@
-mat-sidenav {
-    width: 250px;
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  .active-link {
+    color: var(--color-light-white);
+    text-decoration: underline;
   }
-  
+}

@@ -4,10 +4,10 @@ export const routes: Routes = [
     {
         path: '',
         pathMatch: 'full',
-        redirectTo: ''
+        redirectTo: 'home'
     },
     {
-        path: '',
+        path: 'home',
         loadComponent: () => import("./core/pages/home/home.component").then(c => c.HomeComponent)
     },
     {

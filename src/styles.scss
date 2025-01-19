@@ -1,17 +1,43 @@
 /* You can add global styles to this file, and also import other style files */
 @use "bootstrap/scss/bootstrap";
 
-html, body { 
-    height: 100%; 
+:root {
+    --color-skyblue: #007d9c;
+    --color-skyblue-dark: #253443;
+    --color-yellow: #fddd00;
+    --color-white: #ffffff;
+    --color-light-white: #e3e3e4;
+    --color-dark: #202224;
+    --color-light-dark: #2d2d2d;
 }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-header{
-    width: 100%;
-    height: 90px;
+html,
+body {
+    height: 100%;
 }
 
-main{
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+header,
+main {
+    color: var(--color-white);
+}
+
+header {
     width: 100%;
-    min-height: calc(100vh - 90px);
+    height: 58px;
+    background-color: var(--color-skyblue);
+
+    a {
+        text-decoration: none;
+        color: var(--color-white);
+    }
+}
+
+main {
+    width: 100%;
+    min-height: calc(100vh - 58px);
 }

@@ -1,8 +1,7 @@
-<ul class="d-flex justify-content-start w-100">
+<ul class="d-flex justify-content-start w-100 h-100">
+    @for (link of linkList; track $index) {
     <li class="me-5">
-        <a routerLink="/" routerLinkActive="active-link">home</a>
+        <a routerLink="{{link.path}}" routerLinkActive="active-link">{{link.name | uppercase}}</a>
     </li>
-    <li>
-        <a routerLink="/events" routerLinkActive="active-link">events</a>
-    </li>
+    }
 </ul>
