@@ -21,15 +21,11 @@ body {
     font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
-header,
-main {
-    color: var(--color-white);
-}
-
 header {
     width: 100%;
     height: 58px;
     background-color: var(--color-skyblue);
+    color: var(--color-white);
 
     a {
         text-decoration: none;

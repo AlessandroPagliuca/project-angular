@@ -15,15 +15,15 @@ export class NavbarComponent {
   protected linkList: RouterLinkList[] = [
     {
       path: API_PATH.HOME,
-      name: 'home'
+      name: API_PATH.HOME
     },
     {
       path: API_PATH.EVENTS,
-      name: 'events'
+      name: API_PATH.EVENTS,
     },
     {
       path: API_PATH.SIGNUP,
-      name: 'signup'
+      name: API_PATH.SIGNUP,
     },
   ];
 

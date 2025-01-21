@@ -1,0 +1,13 @@
+.card {
+    height: 150px;
+
+    mat-card-title {
+        color: var(--color-skyblue);
+    }
+
+    mat-card-content {
+        p {
+            color: var(--color-light-dark);
+        }
+    }
+}

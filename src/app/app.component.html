@@ -8,8 +8,9 @@
       <nav class="w-100">
         <app-navbar></app-navbar>
       </nav>
-      <button [ngClass]="{'d-none': !isMobileSizeScreen}" type="button" mat-button (click)="sidenav.toggle()">
-        Toggle sidenav
+      <button mat-mini-fab aria-label="button menu" [ngClass]="{'d-none': !isMobileSizeScreen}" type="button"
+        (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
       </button>
     </header>
     <!--MAIN CONTENT-->

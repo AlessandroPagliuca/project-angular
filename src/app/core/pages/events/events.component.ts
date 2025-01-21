@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ModelEvent } from '../../../shared/models/event/modelEvent';
 import { EventService } from '../../services/event.service';
+import { CardWithBtnTitleComponent } from "../../../shared/components/card-with-btn-title/card-with-btn-title.component";
 
 @Component({
   selector: 'app-events',
-  imports: [],
+  imports: [CardWithBtnTitleComponent],
   providers: [EventService],
   templateUrl: './events.component.html',
   styleUrl: './events.component.scss'
@@ -27,12 +28,7 @@ export class EventsComponent implements OnInit {
           this.eventList = res;
           this.isLoading = false;
           console.log('Eventi ricevuti:', res);
-        } else {
-          console.error('Nessun evento trovato:', res);
         }
-      },
-      error: (error) => {
-        console.error('Errore durante il caricamento degli eventi:', error);
       },
     });
   }

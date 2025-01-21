@@ -2,7 +2,11 @@
 @if (isLoading) {
 <p>loading...</p>
 }@else{
-@for (event of eventList; track $index) {
-<p>{{event.name}}</p>
-}
+<div class="row g-3">
+    @for (event of eventList; track $index) {
+    <div class="col-12 col-md-6 col-lg-4">
+        <shared-card-with-btn-title [name]="event.name" [description]="event.description" />
+    </div>
+    }
+</div>
 }
