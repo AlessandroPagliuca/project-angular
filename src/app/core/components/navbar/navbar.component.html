@@ -1,6 +1,6 @@
-<ul class="d-flex justify-content-start w-100 h-100">
+<ul [ngClass]="styleClasses">
     @for (link of linkList; track $index) {
-    <li class="me-5">
+    <li class="d-flex align-items-center ps-4 pe-4" [routerLinkActive]="activeLi">
         <a routerLink="{{link.path}}" routerLinkActive="active-link">{{link.name | uppercase}}</a>
     </li>
     }

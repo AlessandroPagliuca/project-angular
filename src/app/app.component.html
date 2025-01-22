@@ -1,12 +1,18 @@
 <mat-sidenav-container>
   <!--SIDENAV-->
-  <mat-sidenav #sidenav position="end" mode="over" class="aside-nav bg-danger">End</mat-sidenav>
+  <mat-sidenav #sidenav position="end" mode="over" class="aside-nav">
+    <app-navbar-link [styleClasses]="'d-flex flex-column align-items-start w-100 h-100 p-3'"
+      [activeLi]="'active-li-sidenav'" />
+  </mat-sidenav>
   <mat-sidenav-content>
     <!--NAVBAR-->
     <header class="container-fluid d-flex align-items-center"
       [ngClass]="{'justify-content-between': isMobileSizeScreen}">
-      <nav class="w-100">
-        <app-navbar></app-navbar>
+      <nav class="d-flex justify-content-between align-items-center">
+        <!--create generic comp fo logo-->
+        <div>LOGO</div>
+        <app-navbar-link [styleClasses]="'d-flex justify-content-center align-self-end'" [activeLi]="'active-li'"
+          [ngClass]="{'d-none': isMobileSizeScreen}" />
       </nav>
       <button mat-mini-fab aria-label="button menu" [ngClass]="{'d-none': !isMobileSizeScreen}" type="button"
         (click)="sidenav.toggle()">
@@ -14,7 +20,7 @@
       </button>
     </header>
     <!--MAIN CONTENT-->
-    <main class="container">
+    <main>
       <router-outlet></router-outlet>
     </main>
   </mat-sidenav-content>
