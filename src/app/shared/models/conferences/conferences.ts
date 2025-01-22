@@ -1,4 +1,4 @@
-export interface ModelEvent {
+export interface IConferences {
     name: string,
     description: string,
     location: string,

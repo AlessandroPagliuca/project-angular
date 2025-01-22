@@ -18,8 +18,8 @@ export class NavbarComponent {
       name: API_PATH.HOME
     },
     {
-      path: API_PATH.EVENTS,
-      name: API_PATH.EVENTS,
+      path: API_PATH.CONFERENCES,
+      name: API_PATH.CONFERENCES,
     },
     {
       path: API_PATH.SIGNUP,

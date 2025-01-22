@@ -3,12 +3,13 @@ import { MaterialModule } from '../../material.module';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 @Component({
-  selector: 'shared-card-with-btn-title',
+  selector: 'shared-generic-card',
   imports: [MaterialModule, MatMenuModule, MatButtonModule],
-  templateUrl: './card-with-btn-title.component.html',
-  styleUrl: './card-with-btn-title.component.scss'
+  templateUrl: './generic-card.component.html',
+  styleUrl: './generic-card.component.scss'
+
 })
-export class CardWithBtnTitleComponent {
+export class GenericCardComponent {
 
   @Input() name!: string;
   @Input() description!: string;
