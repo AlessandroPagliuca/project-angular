@@ -1,7 +1,9 @@
 <ul [ngClass]="styleClasses">
     @for (link of linkList; track $index) {
     <li class="d-flex align-items-center ps-4 pe-4" [routerLinkActive]="activeLi">
-        <a routerLink="{{link.path}}" routerLinkActive="active-link">{{link.name | uppercase}}</a>
+        <a routerLink="{{link.path}}" routerLinkActive="active-link"
+            (click)="closeSideNav && closeSideNav()">{{link.name |
+            uppercase}}</a>
     </li>
     }
 </ul>

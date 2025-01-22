@@ -1,8 +1,10 @@
 <mat-sidenav-container>
   <!--SIDENAV-->
   <mat-sidenav #sidenav position="end" mode="over" class="aside-nav">
+    <!--The bind method allows you to bind the value of this to a function,
+    ensuring that when it is called, the context (this) remains what you want.-->
     <app-navbar-link [styleClasses]="'d-flex flex-column align-items-start w-100 h-100 p-3'"
-      [activeLi]="'active-li-sidenav'" />
+      [activeLi]="'active-li-sidenav'" [closeSideNav]="closeSideNav.bind(this)" />
   </mat-sidenav>
   <mat-sidenav-content>
     <!--NAVBAR-->

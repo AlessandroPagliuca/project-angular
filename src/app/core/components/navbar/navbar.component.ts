@@ -29,6 +29,6 @@ export class NavbarComponent {
 
   @Input() styleClasses!: string;
   @Input() activeLi!: string;
-
+  @Input() closeSideNav?: () => void;
   constructor() { }
 }
