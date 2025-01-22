@@ -29,7 +29,7 @@ export class AppComponent {
     });
   }
 
-  closeSideNav() {
+  protected closeSideNav() {
     if (this.sidenav) {
       this.sidenav.toggle(false);
     } else {
