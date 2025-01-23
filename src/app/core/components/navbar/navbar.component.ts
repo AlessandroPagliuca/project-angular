@@ -12,7 +12,7 @@ import { API_PATH } from '../../../shared/enums/api-path';
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
-  protected linkList: RouterLinkList[] = [
+  linkList: RouterLinkList[] = [
     {
       path: API_PATH.HOME,
       name: API_PATH.HOME

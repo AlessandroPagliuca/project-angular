@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ConferencesComponent } from './conferences.component';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import { provideHttpClientTesting } from '@angular/common/http/testing';
 
 describe('ConferencesComponent', () => {
   let component: ConferencesComponent;
@@ -8,9 +10,12 @@ describe('ConferencesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ConferencesComponent]
-    })
-    .compileComponents();
+      imports: [ConferencesComponent],
+      providers: [
+        provideHttpClient(withInterceptorsFromDi()),
+        provideHttpClientTesting(),
+      ]
+    }).compileComponents();
 
     fixture = TestBed.createComponent(ConferencesComponent);
     component = fixture.componentInstance;

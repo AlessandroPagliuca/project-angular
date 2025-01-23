@@ -12,8 +12,7 @@ export class ConferencesService {
   constructor(private http: HttpClient) { }
 
   getAllConferences(): Observable<IConferences[]> {
-    //${API_PATH.CONFERENCES} change path in be 
-    return this.http.get<IConferences[]>(`${environmentLocal.API_URL}/events`).pipe(
+    return this.http.get<IConferences[]>(`${environmentLocal.API_URL}/${API_PATH.CONFERENCES}`).pipe(
       catchError(error => {
         console.error('Errore durante la chiamata getAllConferences:', error);
         return of([]);
